@@ -72,18 +72,51 @@ namespace HRHarmonySystem
                 MessageBox.Show("Please fill in all fields", "ErrorMessage", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else{
-                try
-                {
 
-                }
-                catch (Exception ex)
-                 {
-                MessageBox.Show("Error: " + ex, "ErrorMessage", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
+                if(connect.State == ConnectionState.Closed)
                 {
-                connect.Close();
+                    try
+                    {
+                        connect.Open();
+
+                        string selectData = "SELECT * FROM users WHERE username = @username AND password = @password";
+
+                        using(SqlCommand cmd = new SqlCommand(selectData, connect))
+                        {
+                            cmd.Parameters.AddWithValue("@username", login_username.Text.Trim());
+                            cmd.Parameters.AddWithValue("@password", login_password.Text.Trim());
+
+                            //Reads within the database
+                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
+
+                            
+
+                            if(table.Rows.Count >= 1)
+                            {
+                                MessageBox.Show("Login Successful", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                MainForm mainform = new MainForm();
+                                mainform.Show();
+                                this.Hide();
+                            }
+                            else 
+                            {
+                                MessageBox.Show("Incorrect Username/Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error: " + ex, "ErrorMessage", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
                 }
+                
         }
         }
     }
