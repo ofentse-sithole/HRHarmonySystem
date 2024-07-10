@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.login_signupBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,13 +40,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.login_showPassword = new System.Windows.Forms.CheckBox();
             this.login_btn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.login_signupBtn);
@@ -58,21 +58,14 @@
             this.panel1.Size = new System.Drawing.Size(229, 445);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(58, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 103);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(11, 153);
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.Location = new System.Drawing.Point(3, 184);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 16);
+            this.label6.Size = new System.Drawing.Size(209, 15);
             this.label6.TabIndex = 2;
             this.label6.Text = "Employee Management System";
             // 
@@ -80,6 +73,7 @@
             // 
             this.login_signupBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.login_signupBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.login_signupBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F);
             this.login_signupBtn.ForeColor = System.Drawing.SystemColors.InfoText;
             this.login_signupBtn.Location = new System.Drawing.Point(47, 335);
             this.login_signupBtn.Name = "login_signupBtn";
@@ -93,11 +87,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(35, 300);
+            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(44, 307);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 18);
+            this.label5.Size = new System.Drawing.Size(145, 15);
             this.label5.TabIndex = 0;
             this.label5.Text = "Register you Account";
             // 
@@ -186,6 +180,15 @@
             this.login_btn.Text = "LOGIN";
             this.login_btn.UseVisualStyleBackColor = false;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_employee_job_seeker_unemployee_work_icon_1320184368523588852_128;
+            this.pictureBox1.Location = new System.Drawing.Point(37, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 133);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 

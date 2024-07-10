@@ -169,11 +169,34 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RegitserForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegitserForm.Designer.cs">
       <DependentUpon>RegitserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Add_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Add_Employee.Designer.cs">
+      <DependentUpon>Add_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Salary.Designer.cs">
+      <DependentUpon>Salary.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -184,9 +207,19 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RegitserForm.resx">
       <DependentUpon>RegitserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Add_Employee.resx">
+      <DependentUpon>Add_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Salary.resx">
+      <DependentUpon>Salary.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -202,12 +235,28 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="Resources\download-icon-people-1324438838447065071_256.png" />
+    <None Include="Resources\download-icon-people-1324438838447065071_48.png" />
+    <None Include="Resources\download-icon-people-1324438838447065071_64.png" />
+    <None Include="Resources\download-icon-people+delete-1324760609255154947_64.png" />
+    <None Include="Resources\download-icon-user+icon-1320183705947339583_64.png" />
+    <None Include="Resources\download-icon-employee+job+seeker+unemployee+work+icon-1320184368523588852_64.png" />
+    <None Include="Resources\download-icon-employee+job+seeker+unemployee+work+icon-1320184368523588852_128.png" />
+    <None Include="Resources\download-icon-employee+job+seeker+unemployee+work+icon-1320184368523588852_1281.png" />
+    <None Include="Resources\download-icon-employee+job+seeker+unemployee+work+icon-1320184368523588852_1282.png" />
+    <None Include="Resources\download-icon-money-1319964824913825503_48.png" />
+    <None Include="Resources\download-icon-money-1319964824913825503_32.png" />
+    <None Include="Resources\download-icon-add+avatar+human+man+profile+icon-1320085876593184757_32.png" />
+    <None Include="Resources\download-icon-dashboard+default+home+house+page+start+icon-1320166550253117697_32.png" />
+    <None Include="Resources\download-icon-user+icon-1320191245971961880_64.png" />
+    <None Include="Resources\download-icon-user+icon-1320191245971961880_128.png" />
+    <None Include="Resources\download-icon-exit+to+icon-1320183325651831323_24.png" />
     <Content Include="Resources\employee_card.jpg" />
     <Content Include="Resources\employee card.jpg" />
+    <None Include="Resources\Employee_Id.png" />
+    <None Include="Resources\Total_Employee.png" />
     <None Include="Resources\employeecard.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
