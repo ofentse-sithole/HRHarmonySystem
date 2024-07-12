@@ -155,6 +155,19 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Employee.Designer.cs">
+      <DependentUpon>Add_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeData.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,24 +193,18 @@
     <Compile Include="RegitserForm.Designer.cs">
       <DependentUpon>RegitserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="User\Add_Employee.cs">
+    <Compile Include="Salary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User\Add_Employee.Designer.cs">
-      <DependentUpon>Add_Employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User\Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User\Salary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\Salary.Designer.cs">
+    <Compile Include="Salary.Designer.cs">
       <DependentUpon>Salary.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Add_Employee.resx">
+      <DependentUpon>Add_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,13 +219,7 @@
     <EmbeddedResource Include="RegitserForm.resx">
       <DependentUpon>RegitserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User\Add_Employee.resx">
-      <DependentUpon>Add_Employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User\Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="User\Salary.resx">
+    <EmbeddedResource Include="Salary.resx">
       <DependentUpon>Salary.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HRHarmonySystem.User
+namespace HRHarmonySystem
 {
-    public partial class Salary : Form
+    public partial class Salary : UserControl
     {
         public Salary()
         {

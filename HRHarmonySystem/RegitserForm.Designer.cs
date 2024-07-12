@@ -36,11 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.register_signInBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -128,15 +128,6 @@
             this.panel1.Size = new System.Drawing.Size(245, 445);
             this.panel1.TabIndex = 9;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_employee_job_seeker_unemployee_work_icon_1320184368523588852_128;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 132);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -185,6 +176,15 @@
             this.exit.TabIndex = 17;
             this.exit.Text = "X";
             this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_employee_job_seeker_unemployee_work_icon_1320184368523588852_128;
+            this.pictureBox1.Location = new System.Drawing.Point(38, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(145, 155);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // RegitserForm
             // 

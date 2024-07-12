@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.login_signupBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.login_showPassword = new System.Windows.Forms.CheckBox();
             this.login_btn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(229, 445);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_employee_job_seeker_unemployee_work_icon_1320184368523588852_128;
+            this.pictureBox1.Location = new System.Drawing.Point(37, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 158);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label6
             // 
@@ -180,15 +190,6 @@
             this.login_btn.Text = "LOGIN";
             this.login_btn.UseVisualStyleBackColor = false;
             this.login_btn.Click += new System.EventHandler(this.login_btn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_employee_job_seeker_unemployee_work_icon_1320184368523588852_128;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 133);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 

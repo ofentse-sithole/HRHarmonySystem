@@ -33,11 +33,16 @@
             this.exit = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            this.btn_signout = new System.Windows.Forms.Button();
+            this.btn_salary = new System.Windows.Forms.Button();
+            this.btn_employee = new System.Windows.Forms.Button();
+            this.btn_dashboard = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.salary1 = new HRHarmonySystem.Salary();
+            this.add_Employee1 = new HRHarmonySystem.Add_Employee();
+            this.dashboard1 = new HRHarmonySystem.Dashboard();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,10 +81,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btn_signout);
+            this.panel2.Controls.Add(this.btn_salary);
+            this.panel2.Controls.Add(this.btn_employee);
+            this.panel2.Controls.Add(this.btn_dashboard);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -98,57 +104,66 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Welcome, User";
             // 
-            // button4
+            // sqlCommand1
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.Image = global::HRHarmonySystem.Properties.Resources.download_icon_exit_to_icon_1320183325651831323_24;
-            this.button4.Location = new System.Drawing.Point(15, 516);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(44, 35);
-            this.button4.TabIndex = 6;
-            this.button4.UseVisualStyleBackColor = false;
+            this.sqlCommand1.CommandTimeout = 30;
+            this.sqlCommand1.EnableOptimizedParameterBinding = false;
             // 
-            // button3
+            // btn_signout
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::HRHarmonySystem.Properties.Resources.download_icon_money_1319964824913825503_32;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 371);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(199, 53);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "SALARY";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_signout.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_signout.Image = global::HRHarmonySystem.Properties.Resources.download_icon_exit_to_icon_1320183325651831323_24;
+            this.btn_signout.Location = new System.Drawing.Point(15, 516);
+            this.btn_signout.Name = "btn_signout";
+            this.btn_signout.Size = new System.Drawing.Size(44, 35);
+            this.btn_signout.TabIndex = 6;
+            this.btn_signout.UseVisualStyleBackColor = false;
+            this.btn_signout.Click += new System.EventHandler(this.btn_signout_Click);
             // 
-            // button2
+            // btn_salary
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::HRHarmonySystem.Properties.Resources.download_icon_add_avatar_human_man_profile_icon_1320085876593184757_32;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(12, 296);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 54);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "ADD EMPLOYEE";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_salary.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_salary.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salary.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salary.Image = global::HRHarmonySystem.Properties.Resources.download_icon_money_1319964824913825503_32;
+            this.btn_salary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salary.Location = new System.Drawing.Point(12, 371);
+            this.btn_salary.Name = "btn_salary";
+            this.btn_salary.Size = new System.Drawing.Size(199, 53);
+            this.btn_salary.TabIndex = 5;
+            this.btn_salary.Text = "SALARY";
+            this.btn_salary.UseVisualStyleBackColor = false;
+            this.btn_salary.Click += new System.EventHandler(this.btn_salary_Click);
             // 
-            // button1
+            // btn_employee
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_dashboard_default_home_house_page_start_icon_1320166550253117697_32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 53);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "DASHBOARD";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btn_employee.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_employee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_employee.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_employee.Image = global::HRHarmonySystem.Properties.Resources.download_icon_add_avatar_human_man_profile_icon_1320085876593184757_32;
+            this.btn_employee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_employee.Location = new System.Drawing.Point(12, 296);
+            this.btn_employee.Name = "btn_employee";
+            this.btn_employee.Size = new System.Drawing.Size(199, 54);
+            this.btn_employee.TabIndex = 4;
+            this.btn_employee.Text = "ADD EMPLOYEE";
+            this.btn_employee.UseVisualStyleBackColor = false;
+            this.btn_employee.Click += new System.EventHandler(this.btn_employee_Click);
+            // 
+            // btn_dashboard
+            // 
+            this.btn_dashboard.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_dashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_dashboard.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_dashboard.Image = global::HRHarmonySystem.Properties.Resources.download_icon_dashboard_default_home_house_page_start_icon_1320166550253117697_32;
+            this.btn_dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_dashboard.Location = new System.Drawing.Point(12, 223);
+            this.btn_dashboard.Name = "btn_dashboard";
+            this.btn_dashboard.Size = new System.Drawing.Size(199, 53);
+            this.btn_dashboard.TabIndex = 3;
+            this.btn_dashboard.Text = "DASHBOARD";
+            this.btn_dashboard.UseVisualStyleBackColor = false;
+            this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
             // pictureBox1
             // 
@@ -159,12 +174,49 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // salary1
+            // 
+            this.salary1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.salary1.Location = new System.Drawing.Point(225, 35);
+            this.salary1.Name = "salary1";
+            this.salary1.Size = new System.Drawing.Size(875, 565);
+            this.salary1.TabIndex = 2;
+            // 
+            // add_Employee1
+            // 
+            this.add_Employee1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.add_Employee1.Location = new System.Drawing.Point(225, 35);
+            this.add_Employee1.Name = "add_Employee1";
+            this.add_Employee1.Size = new System.Drawing.Size(875, 565);
+            this.add_Employee1.TabIndex = 3;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dashboard1.Location = new System.Drawing.Point(225, 35);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(875, 565);
+            this.dashboard1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(65, 526);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "SIGN OUT";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1100, 600);
+            this.Controls.Add(this.dashboard1);
+            this.Controls.Add(this.add_Employee1);
+            this.Controls.Add(this.salary1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -186,11 +238,16 @@
         private System.Windows.Forms.Label exit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_dashboard;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_salary;
+        private System.Windows.Forms.Button btn_employee;
+        private System.Windows.Forms.Button btn_signout;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private Salary salary1;
+        private Add_Employee add_Employee1;
+        private Dashboard dashboard1;
+        private System.Windows.Forms.Label label2;
     }
 }
