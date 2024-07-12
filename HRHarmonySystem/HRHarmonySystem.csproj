@@ -236,7 +236,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Directory\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\download-icon-people-1324438838447065071_256.png" />
     <None Include="Resources\download-icon-people-1324438838447065071_48.png" />
