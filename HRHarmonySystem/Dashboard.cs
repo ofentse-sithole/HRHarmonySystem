@@ -18,6 +18,10 @@ namespace HRHarmonySystem
         public Dashboard()
         {
             InitializeComponent();
+
+            DashboardDisplayAE();
+            DashboardDisplayIE();
+            DashboardDisplayTE();
         }
 
         //TOTAL EMPLOYEES
