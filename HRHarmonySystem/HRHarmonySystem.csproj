@@ -161,18 +161,26 @@
     <Compile Include="Add_Employee.Designer.cs">
       <DependentUpon>Add_Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\InsuranceData.cs" />
+    <Compile Include="Class\SalaryData.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeData.cs" />
+    <Compile Include="Class\EmployeeData.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Insurance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Insurance.Designer.cs">
+      <DependentUpon>Insurance.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -207,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Insurance.resx">
+      <DependentUpon>Insurance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -256,6 +267,8 @@
     <None Include="Resources\download-icon-user+icon-1320191245971961880_64.png" />
     <None Include="Resources\download-icon-user+icon-1320191245971961880_128.png" />
     <None Include="Resources\download-icon-exit+to+icon-1320183325651831323_24.png" />
+    <None Include="Resources\download-icon-hospital-1329858340992289917_32.png" />
+    <None Include="Resources\download-icon-hospital-1329858340992289917_321.png" />
     <Content Include="Resources\employee_card.jpg" />
     <Content Include="Resources\employee card.jpg" />
     <None Include="Resources\Employee_Id.png" />

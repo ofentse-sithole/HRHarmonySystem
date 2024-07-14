@@ -127,8 +127,8 @@
   <data name="Total_Employee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Total_Employee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download-icon-dashboard+default+home+house+page+start+icon-1320166550253117697_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download-icon-dashboard+default+home+house+page+start+icon-1320166550253117697_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download-icon-hospital-1329858340992289917_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-icon-hospital-1329858340992289917_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="download-icon-user+icon-1320191245971961880_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download-icon-user+icon-1320191245971961880_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,6 +144,9 @@
   </data>
   <data name="Employee_Id" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Employee_Id.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download-icon-money-1319964824913825503_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-icon-money-1319964824913825503_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="employee_card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee_card.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +166,9 @@
   <data name="employee card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\employee card.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="download-icon-exit+to+icon-1320183325651831323_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-icon-exit+to+icon-1320183325651831323_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="download-icon-employee+job+seeker+unemployee+work+icon-1320184368523588852_1282" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download-icon-employee+job+seeker+unemployee+work+icon-1320184368523588852_1282.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,10 +181,10 @@
   <data name="download-icon-employee+job+seeker+unemployee+work+icon-1320184368523588852_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\download-icon-employee+job+seeker+unemployee+work+icon-1320184368523588852_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download-icon-money-1319964824913825503_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download-icon-money-1319964824913825503_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download-icon-dashboard+default+home+house+page+start+icon-1320166550253117697_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-icon-dashboard+default+home+house+page+start+icon-1320166550253117697_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="download-icon-exit+to+icon-1320183325651831323_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\download-icon-exit+to+icon-1320183325651831323_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="download-icon-hospital-1329858340992289917_321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download-icon-hospital-1329858340992289917_321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

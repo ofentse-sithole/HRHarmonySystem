@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HRHarmonySystem.Class;
 //database
 using System.Data;
 using System.Data.SqlClient;
@@ -58,7 +59,7 @@ namespace HRHarmonySystem
                     {
                         connect.Open();
 
-                        string checkEmployeeID = "SELECT COUNT(*) FROM employee WHERE employee_id = @emID";
+                        string checkEmployeeID = "SELECT COUNT(*) FROM employee WHERE employee_id = @emID AND delete_date IS NULL";
                         using (SqlCommand checkEmployee = new SqlCommand(checkEmployeeID, connect))
                         {
 
@@ -227,19 +228,17 @@ namespace HRHarmonySystem
                         connect.Open();
 
                         string updateData = "UPDATE employee SET full_name = @fullName, gender = @gender, " +
-                            "contact_number = @contactNum, position = @position,  update_date = @update_date,  status = @status" +
-                            "WHERE employee_id = @employeeID";
+                            "contact_number = @contactNum, position = @position,  update_date = @update_date,  status = @status WHERE employee_id = @employeeID";
 
                         using (SqlCommand cmd = new SqlCommand(updateData, connect))
                         {
-                            cmd.Parameters.AddWithValue("@employeeID", addEmployee_id.Text.Trim());
                             cmd.Parameters.AddWithValue("@fullName", addEmployee_Name.Text.Trim());
                             cmd.Parameters.AddWithValue("@gender", addEmployee_Gender.Text.Trim());
                             cmd.Parameters.AddWithValue("@contactNum", addEmployee_Phone.Text.Trim());
                             cmd.Parameters.AddWithValue("@position", addEmployee_position.Text.Trim());
-
                             cmd.Parameters.AddWithValue("@update_date", date);
                             cmd.Parameters.AddWithValue("@status", addEmployee_Status.Text.Trim());
+                            cmd.Parameters.AddWithValue("@employeeID", addEmployee_id.Text.Trim());
 
                             cmd.ExecuteNonQuery();
 
@@ -262,7 +261,7 @@ namespace HRHarmonySystem
                 }
                 else
                 {
-
+                    MessageBox.Show("Cancelled", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 
             }
@@ -294,13 +293,13 @@ namespace HRHarmonySystem
                     {
                         connect.Open();
 
-                        string updateData = "UPDATE employee SET delete_date = @delete_date" +
+                        string updateData = "UPDATE employee SET delete_date = @delete_Date " +
                             "WHERE employee_id = @employeeID";
 
                         using (SqlCommand cmd = new SqlCommand(updateData, connect))
                         {
                             cmd.Parameters.AddWithValue("@employeeID", addEmployee_id.Text.Trim());
-                            cmd.Parameters.AddWithValue("@delete", date);
+                            cmd.Parameters.AddWithValue("@delete_Date", date);
 
                             cmd.ExecuteNonQuery();
 

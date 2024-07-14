@@ -20,7 +20,7 @@ namespace HRHarmonySystem
         public string Contact_Number { get; set; }//4
         public string Position { get; set; } //5
         public string Image { get; set; } //6
-        public float Salary { get; set; } //7
+        public int Salary { get; set; } //7
         public string Status { get; set; } //8
 
 
@@ -73,5 +73,7 @@ namespace HRHarmonySystem
             }
             return employeeList;
         }
+
+        
     }
 }

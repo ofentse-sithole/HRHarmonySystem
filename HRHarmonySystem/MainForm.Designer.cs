@@ -32,17 +32,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            this.btn_Insurnace = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.btn_signout = new System.Windows.Forms.Button();
             this.btn_salary = new System.Windows.Forms.Button();
             this.btn_employee = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            this.insurance1 = new HRHarmonySystem.Insurance();
             this.salary1 = new HRHarmonySystem.Salary();
             this.add_Employee1 = new HRHarmonySystem.Add_Employee();
             this.dashboard1 = new HRHarmonySystem.Dashboard();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,6 +83,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.btn_Insurnace);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btn_signout);
             this.panel2.Controls.Add(this.btn_salary);
@@ -94,26 +97,36 @@
             this.panel2.Size = new System.Drawing.Size(225, 564);
             this.panel2.TabIndex = 1;
             // 
-            // label3
+            // btn_Insurnace
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Welcome, User";
+            this.btn_Insurnace.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_Insurnace.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Insurnace.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Insurnace.Image = global::HRHarmonySystem.Properties.Resources.download_icon_hospital_1329858340992289917_321;
+            this.btn_Insurnace.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Insurnace.Location = new System.Drawing.Point(12, 444);
+            this.btn_Insurnace.Name = "btn_Insurnace";
+            this.btn_Insurnace.Size = new System.Drawing.Size(199, 53);
+            this.btn_Insurnace.TabIndex = 8;
+            this.btn_Insurnace.Text = "INSURANCE";
+            this.btn_Insurnace.UseVisualStyleBackColor = false;
+            this.btn_Insurnace.Click += new System.EventHandler(this.btnInsurance_Click);
             // 
-            // sqlCommand1
+            // label2
             // 
-            this.sqlCommand1.CommandTimeout = 30;
-            this.sqlCommand1.EnableOptimizedParameterBinding = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(65, 536);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "SIGN OUT";
             // 
             // btn_signout
             // 
             this.btn_signout.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_signout.Image = global::HRHarmonySystem.Properties.Resources.download_icon_exit_to_icon_1320183325651831323_24;
-            this.btn_signout.Location = new System.Drawing.Point(15, 516);
+            this.btn_signout.Location = new System.Drawing.Point(15, 526);
             this.btn_signout.Name = "btn_signout";
             this.btn_signout.Size = new System.Drawing.Size(44, 35);
             this.btn_signout.TabIndex = 6;
@@ -165,48 +178,61 @@
             this.btn_dashboard.UseVisualStyleBackColor = false;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(39, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Welcome, User";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_user_icon_1320191245971961880_128;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 32);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 20);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 126);
+            this.pictureBox1.Size = new System.Drawing.Size(151, 137);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // sqlCommand1
+            // 
+            this.sqlCommand1.CommandTimeout = 30;
+            this.sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
+            // insurance1
+            // 
+            this.insurance1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.insurance1.Location = new System.Drawing.Point(225, 36);
+            this.insurance1.Name = "insurance1";
+            this.insurance1.Size = new System.Drawing.Size(875, 565);
+            this.insurance1.TabIndex = 2;
             // 
             // salary1
             // 
             this.salary1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.salary1.Location = new System.Drawing.Point(225, 35);
+            this.salary1.Location = new System.Drawing.Point(225, 36);
             this.salary1.Name = "salary1";
             this.salary1.Size = new System.Drawing.Size(875, 565);
-            this.salary1.TabIndex = 2;
+            this.salary1.TabIndex = 3;
             // 
             // add_Employee1
             // 
             this.add_Employee1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.add_Employee1.Location = new System.Drawing.Point(225, 35);
+            this.add_Employee1.Location = new System.Drawing.Point(225, 36);
             this.add_Employee1.Name = "add_Employee1";
             this.add_Employee1.Size = new System.Drawing.Size(875, 565);
-            this.add_Employee1.TabIndex = 3;
+            this.add_Employee1.TabIndex = 4;
             // 
             // dashboard1
             // 
             this.dashboard1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dashboard1.Location = new System.Drawing.Point(225, 35);
+            this.dashboard1.Location = new System.Drawing.Point(225, 36);
             this.dashboard1.Name = "dashboard1";
             this.dashboard1.Size = new System.Drawing.Size(875, 565);
-            this.dashboard1.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 526);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "SIGN OUT";
+            this.dashboard1.TabIndex = 5;
             // 
             // MainForm
             // 
@@ -217,6 +243,7 @@
             this.Controls.Add(this.dashboard1);
             this.Controls.Add(this.add_Employee1);
             this.Controls.Add(this.salary1);
+            this.Controls.Add(this.insurance1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -245,9 +272,11 @@
         private System.Windows.Forms.Button btn_employee;
         private System.Windows.Forms.Button btn_signout;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_Insurnace;
+        private Insurance insurance1;
         private Salary salary1;
         private Add_Employee add_Employee1;
         private Dashboard dashboard1;
-        private System.Windows.Forms.Label label2;
     }
 }

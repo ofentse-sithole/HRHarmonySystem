@@ -134,6 +134,26 @@ namespace HRHarmonySystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap download_icon_hospital_1329858340992289917_32 {
+            get {
+                object obj = ResourceManager.GetObject("download-icon-hospital-1329858340992289917_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_icon_hospital_1329858340992289917_321 {
+            get {
+                object obj = ResourceManager.GetObject("download-icon-hospital-1329858340992289917_321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download_icon_money_1319964824913825503_32 {
             get {
                 object obj = ResourceManager.GetObject("download-icon-money-1319964824913825503_32", resourceCulture);

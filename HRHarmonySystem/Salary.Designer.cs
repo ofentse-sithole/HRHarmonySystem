@@ -32,17 +32,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.Salarybtn_Update = new System.Windows.Forms.Button();
+            this.Salarybtn_Clear = new System.Windows.Forms.Button();
+            this.Salarytxt_salary = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.Salarytxt_position = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.Salarytxt_fullName = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.Salarytxt_EmployeeID = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
@@ -79,21 +77,20 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(430, 414);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.maskedTextBox4);
+            this.panel1.Controls.Add(this.Salarybtn_Update);
+            this.panel1.Controls.Add(this.Salarybtn_Clear);
+            this.panel1.Controls.Add(this.Salarytxt_salary);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.maskedTextBox3);
+            this.panel1.Controls.Add(this.Salarytxt_position);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.maskedTextBox2);
+            this.panel1.Controls.Add(this.Salarytxt_fullName);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.maskedTextBox1);
+            this.panel1.Controls.Add(this.Salarytxt_EmployeeID);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(35, 30);
@@ -101,56 +98,36 @@
             this.panel1.Size = new System.Drawing.Size(292, 505);
             this.panel1.TabIndex = 4;
             // 
-            // button4
+            // Salarybtn_Update
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button4.Location = new System.Drawing.Point(159, 410);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 28);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Salarybtn_Update.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Salarybtn_Update.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Salarybtn_Update.Location = new System.Drawing.Point(35, 356);
+            this.Salarybtn_Update.Name = "Salarybtn_Update";
+            this.Salarybtn_Update.Size = new System.Drawing.Size(85, 28);
+            this.Salarybtn_Update.TabIndex = 11;
+            this.Salarybtn_Update.Text = "Update";
+            this.Salarybtn_Update.UseVisualStyleBackColor = false;
+            this.Salarybtn_Update.Click += new System.EventHandler(this.Salarybtn_Update_Click);
             // 
-            // button3
+            // Salarybtn_Clear
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(35, 410);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 28);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Salarybtn_Clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Salarybtn_Clear.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Salarybtn_Clear.Location = new System.Drawing.Point(160, 356);
+            this.Salarybtn_Clear.Name = "Salarybtn_Clear";
+            this.Salarybtn_Clear.Size = new System.Drawing.Size(85, 28);
+            this.Salarybtn_Clear.TabIndex = 10;
+            this.Salarybtn_Clear.Text = "Clear";
+            this.Salarybtn_Clear.UseVisualStyleBackColor = false;
+            this.Salarybtn_Clear.Click += new System.EventHandler(this.Salarybtn_Clear_Click);
             // 
-            // button2
+            // Salarytxt_salary
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(159, 352);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 28);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(35, 352);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 28);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(19, 285);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(239, 22);
-            this.maskedTextBox4.TabIndex = 9;
+            this.Salarytxt_salary.Location = new System.Drawing.Point(19, 285);
+            this.Salarytxt_salary.Name = "Salarytxt_salary";
+            this.Salarytxt_salary.Size = new System.Drawing.Size(239, 22);
+            this.Salarytxt_salary.TabIndex = 9;
             // 
             // label5
             // 
@@ -161,12 +138,12 @@
             this.label5.TabIndex = 8;
             this.label5.Text = "Salary";
             // 
-            // maskedTextBox3
+            // Salarytxt_position
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(19, 211);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(239, 22);
-            this.maskedTextBox3.TabIndex = 7;
+            this.Salarytxt_position.Location = new System.Drawing.Point(19, 211);
+            this.Salarytxt_position.Name = "Salarytxt_position";
+            this.Salarytxt_position.Size = new System.Drawing.Size(239, 22);
+            this.Salarytxt_position.TabIndex = 7;
             // 
             // label4
             // 
@@ -177,12 +154,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Position";
             // 
-            // maskedTextBox2
+            // Salarytxt_fullName
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(19, 129);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(239, 22);
-            this.maskedTextBox2.TabIndex = 5;
+            this.Salarytxt_fullName.Location = new System.Drawing.Point(19, 129);
+            this.Salarytxt_fullName.Name = "Salarytxt_fullName";
+            this.Salarytxt_fullName.Size = new System.Drawing.Size(239, 22);
+            this.Salarytxt_fullName.TabIndex = 5;
             // 
             // label3
             // 
@@ -193,12 +170,12 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Full Name";
             // 
-            // maskedTextBox1
+            // Salarytxt_EmployeeID
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(19, 56);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(239, 22);
-            this.maskedTextBox1.TabIndex = 3;
+            this.Salarytxt_EmployeeID.Location = new System.Drawing.Point(19, 56);
+            this.Salarytxt_EmployeeID.Name = "Salarytxt_EmployeeID";
+            this.Salarytxt_EmployeeID.Size = new System.Drawing.Size(239, 22);
+            this.Salarytxt_EmployeeID.TabIndex = 3;
             // 
             // label2
             // 
@@ -241,17 +218,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.Button Salarybtn_Update;
+        private System.Windows.Forms.Button Salarybtn_Clear;
+        private System.Windows.Forms.MaskedTextBox Salarytxt_salary;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox Salarytxt_position;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox Salarytxt_fullName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox Salarytxt_EmployeeID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
     }

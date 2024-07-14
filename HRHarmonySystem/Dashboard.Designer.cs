@@ -31,13 +31,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Dashboard_IE = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Dashboard_AE = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Dashboard_TE = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -75,28 +75,28 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel5.Controls.Add(this.label6);
+            this.panel5.Controls.Add(this.Dashboard_IE);
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Location = new System.Drawing.Point(582, 13);
+            this.panel5.Location = new System.Drawing.Point(575, 13);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(217, 117);
+            this.panel5.Size = new System.Drawing.Size(230, 117);
             this.panel5.TabIndex = 1;
             // 
-            // label6
+            // Dashboard_IE
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(192, 19);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(14, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "0";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Dashboard_IE.AutoSize = true;
+            this.Dashboard_IE.Location = new System.Drawing.Point(201, 19);
+            this.Dashboard_IE.Name = "Dashboard_IE";
+            this.Dashboard_IE.Size = new System.Drawing.Size(14, 16);
+            this.Dashboard_IE.TabIndex = 5;
+            this.Dashboard_IE.Text = "0";
+            this.Dashboard_IE.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 85);
+            this.label3.Location = new System.Drawing.Point(102, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 16);
             this.label3.TabIndex = 4;
@@ -105,28 +105,28 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.Dashboard_AE);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Location = new System.Drawing.Point(314, 13);
+            this.panel4.Location = new System.Drawing.Point(303, 13);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(207, 117);
+            this.panel4.Size = new System.Drawing.Size(224, 117);
             this.panel4.TabIndex = 1;
             // 
-            // label5
+            // Dashboard_AE
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(180, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(14, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "0";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Dashboard_AE.AutoSize = true;
+            this.Dashboard_AE.Location = new System.Drawing.Point(189, 19);
+            this.Dashboard_AE.Name = "Dashboard_AE";
+            this.Dashboard_AE.Size = new System.Drawing.Size(14, 16);
+            this.Dashboard_AE.TabIndex = 4;
+            this.Dashboard_AE.Text = "0";
+            this.Dashboard_AE.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(88, 85);
+            this.label2.Location = new System.Drawing.Point(105, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 16);
             this.label2.TabIndex = 3;
@@ -135,29 +135,29 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.Dashboard_TE);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(37, 13);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(197, 117);
+            this.panel3.Size = new System.Drawing.Size(216, 117);
             this.panel3.TabIndex = 0;
             // 
-            // label4
+            // Dashboard_TE
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(167, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(14, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "0";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.Dashboard_TE.AutoSize = true;
+            this.Dashboard_TE.Location = new System.Drawing.Point(185, 19);
+            this.Dashboard_TE.Name = "Dashboard_TE";
+            this.Dashboard_TE.Size = new System.Drawing.Size(14, 16);
+            this.Dashboard_TE.TabIndex = 3;
+            this.Dashboard_TE.Text = "0";
+            this.Dashboard_TE.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(84, 85);
+            this.label1.Location = new System.Drawing.Point(103, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 16);
             this.label1.TabIndex = 2;
@@ -168,16 +168,16 @@
             this.pictureBox4.Image = global::HRHarmonySystem.Properties.Resources.download_icon_people_delete_1324760609255154947_64;
             this.pictureBox4.Location = new System.Drawing.Point(9, 36);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(69, 65);
+            this.pictureBox4.Size = new System.Drawing.Size(87, 65);
             this.pictureBox4.TabIndex = 1;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::HRHarmonySystem.Properties.Resources.download_icon_people_1324438838447065071_64;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 36);
+            this.pictureBox3.Location = new System.Drawing.Point(7, 36);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(69, 65);
+            this.pictureBox3.Size = new System.Drawing.Size(92, 68);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
@@ -194,7 +194,7 @@
             this.pictureBox1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_user_icon_1320183705947339583_64;
             this.pictureBox1.Location = new System.Drawing.Point(12, 36);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(85, 65);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -227,15 +227,15 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Dashboard_IE;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Dashboard_AE;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Dashboard_TE;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
