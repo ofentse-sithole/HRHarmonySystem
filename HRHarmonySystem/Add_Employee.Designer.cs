@@ -28,8 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.addEmployee_Status = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.addEmployee_Delete = new System.Windows.Forms.Button();
+            this.addEmployee_Clear = new System.Windows.Forms.Button();
+            this.addEmployee_Update = new System.Windows.Forms.Button();
+            this.addEmployee_position = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.addEmployee_Add = new System.Windows.Forms.Button();
             this.addEmployee_ImportImage = new System.Windows.Forms.Button();
+            this.addEmployee_ImageBox = new System.Windows.Forms.PictureBox();
             this.addEmployee_Phone = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.addEmployee_Gender = new System.Windows.Forms.ComboBox();
@@ -41,19 +51,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.addEmployee_Add = new System.Windows.Forms.Button();
-            this.addEmployee_position = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.addEmployee_Update = new System.Windows.Forms.Button();
-            this.addEmployee_Clear = new System.Windows.Forms.Button();
-            this.addEmployee_Delete = new System.Windows.Forms.Button();
-            this.addEmployee_Status = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addEmployee_ImageBox)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -68,7 +69,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.addEmployee_Add);
             this.panel2.Controls.Add(this.addEmployee_ImportImage);
-            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.addEmployee_ImageBox);
             this.panel2.Controls.Add(this.addEmployee_Phone);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.addEmployee_Gender);
@@ -82,6 +83,108 @@
             this.panel2.Size = new System.Drawing.Size(851, 202);
             this.panel2.TabIndex = 5;
             // 
+            // addEmployee_Status
+            // 
+            this.addEmployee_Status.FormattingEnabled = true;
+            this.addEmployee_Status.Items.AddRange(new object[] {
+            "Active",
+            "Unactive"});
+            this.addEmployee_Status.Location = new System.Drawing.Point(456, 99);
+            this.addEmployee_Status.Name = "addEmployee_Status";
+            this.addEmployee_Status.Size = new System.Drawing.Size(122, 24);
+            this.addEmployee_Status.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(343, 106);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 17);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Status";
+            // 
+            // addEmployee_Delete
+            // 
+            this.addEmployee_Delete.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addEmployee_Delete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployee_Delete.Location = new System.Drawing.Point(649, 152);
+            this.addEmployee_Delete.Name = "addEmployee_Delete";
+            this.addEmployee_Delete.Size = new System.Drawing.Size(108, 35);
+            this.addEmployee_Delete.TabIndex = 18;
+            this.addEmployee_Delete.Text = "Delete";
+            this.addEmployee_Delete.UseVisualStyleBackColor = false;
+            this.addEmployee_Delete.Click += new System.EventHandler(this.addEmployee_Delete_Click);
+            // 
+            // addEmployee_Clear
+            // 
+            this.addEmployee_Clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addEmployee_Clear.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployee_Clear.Location = new System.Drawing.Point(502, 152);
+            this.addEmployee_Clear.Name = "addEmployee_Clear";
+            this.addEmployee_Clear.Size = new System.Drawing.Size(108, 35);
+            this.addEmployee_Clear.TabIndex = 17;
+            this.addEmployee_Clear.Text = "Clear";
+            this.addEmployee_Clear.UseVisualStyleBackColor = false;
+            this.addEmployee_Clear.Click += new System.EventHandler(this.addEmployee_Clear_Click);
+            // 
+            // addEmployee_Update
+            // 
+            this.addEmployee_Update.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addEmployee_Update.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployee_Update.Location = new System.Drawing.Point(346, 152);
+            this.addEmployee_Update.Name = "addEmployee_Update";
+            this.addEmployee_Update.Size = new System.Drawing.Size(108, 35);
+            this.addEmployee_Update.TabIndex = 16;
+            this.addEmployee_Update.Text = "Update";
+            this.addEmployee_Update.UseVisualStyleBackColor = false;
+            this.addEmployee_Update.Click += new System.EventHandler(this.addEmployee_Update_Click);
+            // 
+            // addEmployee_position
+            // 
+            this.addEmployee_position.FormattingEnabled = true;
+            this.addEmployee_position.Items.AddRange(new object[] {
+            "Front-End Developer",
+            "Back-End Developer",
+            "Full-Stack Developer",
+            "Android Developer",
+            "Mobile Developer",
+            "DevOps Engineer",
+            "Secuirty Engineer",
+            "Quality Assurance Engineer",
+            "Data Engineer",
+            "Senior Software Developer",
+            "Immediate Software Developer",
+            "Junior Software Developer",
+            "Software Developer Intern ",
+            "Data Analyst Manager"});
+            this.addEmployee_position.Location = new System.Drawing.Point(456, 60);
+            this.addEmployee_position.Name = "addEmployee_position";
+            this.addEmployee_position.Size = new System.Drawing.Size(174, 24);
+            this.addEmployee_position.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(338, 67);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 17);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Position";
+            // 
+            // addEmployee_Add
+            // 
+            this.addEmployee_Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.addEmployee_Add.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addEmployee_Add.Location = new System.Drawing.Point(205, 152);
+            this.addEmployee_Add.Name = "addEmployee_Add";
+            this.addEmployee_Add.Size = new System.Drawing.Size(108, 35);
+            this.addEmployee_Add.TabIndex = 13;
+            this.addEmployee_Add.Text = "Add";
+            this.addEmployee_Add.UseVisualStyleBackColor = false;
+            this.addEmployee_Add.Click += new System.EventHandler(this.addEmployee_Add_Click);
+            // 
             // addEmployee_ImportImage
             // 
             this.addEmployee_ImportImage.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -92,6 +195,17 @@
             this.addEmployee_ImportImage.TabIndex = 12;
             this.addEmployee_ImportImage.Text = "Import";
             this.addEmployee_ImportImage.UseVisualStyleBackColor = false;
+            this.addEmployee_ImportImage.Click += new System.EventHandler(this.addEmployee_ImportImage_Click);
+            // 
+            // addEmployee_ImageBox
+            // 
+            this.addEmployee_ImageBox.BackColor = System.Drawing.Color.Gray;
+            this.addEmployee_ImageBox.Location = new System.Drawing.Point(732, 13);
+            this.addEmployee_ImageBox.Name = "addEmployee_ImageBox";
+            this.addEmployee_ImageBox.Size = new System.Drawing.Size(98, 87);
+            this.addEmployee_ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.addEmployee_ImageBox.TabIndex = 11;
+            this.addEmployee_ImageBox.TabStop = false;
             // 
             // addEmployee_Phone
             // 
@@ -177,13 +291,25 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(32, 60);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(798, 212);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
@@ -196,102 +322,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee\'s Data";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gray;
-            this.pictureBox1.Location = new System.Drawing.Point(732, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(98, 87);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            // 
-            // addEmployee_Add
-            // 
-            this.addEmployee_Add.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.addEmployee_Add.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_Add.Location = new System.Drawing.Point(205, 152);
-            this.addEmployee_Add.Name = "addEmployee_Add";
-            this.addEmployee_Add.Size = new System.Drawing.Size(108, 35);
-            this.addEmployee_Add.TabIndex = 13;
-            this.addEmployee_Add.Text = "Add";
-            this.addEmployee_Add.UseVisualStyleBackColor = false;
-            this.addEmployee_Add.Click += new System.EventHandler(this.addEmployee_Add_Click);
-            // 
-            // addEmployee_position
-            // 
-            this.addEmployee_position.FormattingEnabled = true;
-            this.addEmployee_position.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.addEmployee_position.Location = new System.Drawing.Point(456, 60);
-            this.addEmployee_position.Name = "addEmployee_position";
-            this.addEmployee_position.Size = new System.Drawing.Size(122, 24);
-            this.addEmployee_position.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(338, 67);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 17);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "Position";
-            // 
-            // addEmployee_Update
-            // 
-            this.addEmployee_Update.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.addEmployee_Update.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_Update.Location = new System.Drawing.Point(346, 152);
-            this.addEmployee_Update.Name = "addEmployee_Update";
-            this.addEmployee_Update.Size = new System.Drawing.Size(108, 35);
-            this.addEmployee_Update.TabIndex = 16;
-            this.addEmployee_Update.Text = "Update";
-            this.addEmployee_Update.UseVisualStyleBackColor = false;
-            // 
-            // addEmployee_Clear
-            // 
-            this.addEmployee_Clear.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.addEmployee_Clear.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_Clear.Location = new System.Drawing.Point(502, 152);
-            this.addEmployee_Clear.Name = "addEmployee_Clear";
-            this.addEmployee_Clear.Size = new System.Drawing.Size(108, 35);
-            this.addEmployee_Clear.TabIndex = 17;
-            this.addEmployee_Clear.Text = "Clear";
-            this.addEmployee_Clear.UseVisualStyleBackColor = false;
-            // 
-            // addEmployee_Delete
-            // 
-            this.addEmployee_Delete.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.addEmployee_Delete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addEmployee_Delete.Location = new System.Drawing.Point(649, 152);
-            this.addEmployee_Delete.Name = "addEmployee_Delete";
-            this.addEmployee_Delete.Size = new System.Drawing.Size(108, 35);
-            this.addEmployee_Delete.TabIndex = 18;
-            this.addEmployee_Delete.Text = "Delete";
-            this.addEmployee_Delete.UseVisualStyleBackColor = false;
-            // 
-            // addEmployee_Status
-            // 
-            this.addEmployee_Status.FormattingEnabled = true;
-            this.addEmployee_Status.Items.AddRange(new object[] {
-            "Active",
-            "Unactive"});
-            this.addEmployee_Status.Location = new System.Drawing.Point(456, 99);
-            this.addEmployee_Status.Name = "addEmployee_Status";
-            this.addEmployee_Status.Size = new System.Drawing.Size(122, 24);
-            this.addEmployee_Status.TabIndex = 20;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(343, 106);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 17);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Status";
-            // 
             // Add_Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -303,10 +333,10 @@
             this.Size = new System.Drawing.Size(875, 565);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addEmployee_ImageBox)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -315,7 +345,7 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button addEmployee_ImportImage;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox addEmployee_ImageBox;
         private System.Windows.Forms.TextBox addEmployee_Phone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox addEmployee_Gender;

@@ -13,18 +13,18 @@ namespace HRHarmonySystem
     internal class EmployeeData
     {
 
-        public int ID { get; set; }
-        public int EmployeeID { get; set; }
-        public string FullName { get; set; }
-        public string Gender { get; set; }
-        public string Contact_Number { get; set; }
-        public string Position { get; set; }
-        public string Image { get; set; }
-        public float Salary { get; set; }
-        public string Status { get; set; }
+        public int ID { get; set; } //0
+        public int EmployeeID { get; set; } //1
+        public string FullName { get; set; } //2 
+        public string Gender { get; set; } //3 
+        public string Contact_Number { get; set; }//4
+        public string Position { get; set; } //5
+        public string Image { get; set; } //6
+        public float Salary { get; set; } //7
+        public string Status { get; set; } //8
 
 
-        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Ofentse\\OneDrive\\Documents\\employee.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True");
+        SqlConnection connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Ofentse\OneDrive\Documents\employee.mdf;Integrated Security=True;Connect Timeout=30");
 
         public List<EmployeeData> employeeListData()
         {
@@ -53,7 +53,7 @@ namespace HRHarmonySystem
                             employeeData.Contact_Number = reader["contact_number"].ToString();
                             employeeData.Position = reader["position"].ToString();
                             employeeData.Image = reader["image"].ToString();
-                            employeeData.Salary = (float)reader["salary"];
+                            employeeData.Salary = (int)reader["salary"];
                             employeeData.Status = reader["status"].ToString();
 
                             employeeList.Add(employeeData);
