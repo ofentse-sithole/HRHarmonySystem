@@ -7,6 +7,7 @@ HRHarmony System is designed to collect and store employee details digitally, ma
 - **Digital Employee Records**: Store and manage employee details in a secure SQL database.
 - **User-Friendly Interface**: Developed using C# for a seamless user experience.
 - **Paperless Management**: Eliminate the need for paper records, enhancing efficiency and accessibility.
+- **Insurance Employee Records**: Has an option to ask if employee wants company insurance or not.
 
 ## Technologies Used
 - **Programming Language**: C#
