@@ -26,7 +26,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>1</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -62,6 +62,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>download-icon-customer+support+employee+man+team+user+worker+icon-1320183948982988073_48.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Azure.Core, Version=1.38.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
@@ -313,6 +316,7 @@
     <None Include="Resources\download-icon-basic+black-rocket-131994931105240128_48.png" />
     <None Include="Resources\download-icon-basic+black-launch-131994931050360851_32.png" />
     <None Include="Resources\download-icon-basic+black-launch-131994931050360851_48.png" />
+    <Content Include="download-icon-customer+support+employee+man+team+user+worker+icon-1320183948982988073_48.ico" />
     <Content Include="Resources\employee_card.jpg" />
     <Content Include="Resources\employee card.jpg" />
     <None Include="Resources\Employee_Id.png" />
