@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using HRHarmonySystem.Class;
 
 namespace HRHarmonySystem
 {
@@ -18,22 +19,26 @@ namespace HRHarmonySystem
         public Dashboard()
         {
             InitializeComponent();
-
+            
+            DashboardDisplayTE();
             DashboardDisplayAE();
             DashboardDisplayIE();
-            DashboardDisplayTE();
+            DashboardDisplayINE();
+            DashboardDisplayNIE();
+
+
         }
 
         //TOTAL EMPLOYEES
         public void DashboardDisplayTE()
         {
-            if (connect.State != ConnectionState.Closed)
+            if (connect.State == ConnectionState.Closed)
             {
                 try
                 {
                     connect.Open();
 
-                    string selectData = "SELECT COUNT(id) FROM employees WHERE delete_date IS NULL";
+                    string selectData = "SELECT COUNT(id) FROM employee WHERE delete_date IS NULL";
 
                     //used to count amount users
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
@@ -43,9 +48,10 @@ namespace HRHarmonySystem
                         if (reader.Read())
                         {
                             int count = Convert.ToInt32(reader[0]);
-                            Dashboard_TE.Text = count.ToString();
+                            dashboard_TE.Text = count.ToString();
 
                         }
+                        reader.Close();
                     }
 
                 }
@@ -63,13 +69,13 @@ namespace HRHarmonySystem
         //ACTIVE EMPLOYEES
         public void DashboardDisplayAE()
         {
-            if (connect.State != ConnectionState.Closed)
+            if (connect.State == ConnectionState.Closed)
             {
                 try
                 {
                     connect.Open();
 
-                    string selectData = "SELECT COUNT(id) FROM employees WHERE status = @status AND delete_date IS NULL";
+                    string selectData = "SELECT COUNT(id) FROM employee WHERE status = @status AND delete_date IS NULL";
 
                     //used to count amount users
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
@@ -79,10 +85,13 @@ namespace HRHarmonySystem
 
                         if (reader.Read())
                         {
+                            
+
                             int count = Convert.ToInt32(reader[0]);
                             Dashboard_AE.Text = count.ToString();
 
                         }
+                        reader.Close();
                     }
 
                 }
@@ -101,13 +110,13 @@ namespace HRHarmonySystem
         //INACTIVE EMPLOYEES
         public void DashboardDisplayIE()
         {
-            if (connect.State != ConnectionState.Closed)
+            if (connect.State == ConnectionState.Closed)
             {
                 try
                 {
                     connect.Open();
 
-                    string selectData = "SELECT COUNT(id) FROM employees WHERE status = @status AND delete_date IS NULL";
+                    string selectData = "SELECT COUNT(id) FROM employee WHERE status = @status AND delete_date IS NULL";
 
                     //used to count amount users
                     using (SqlCommand cmd = new SqlCommand(selectData, connect))
@@ -121,6 +130,7 @@ namespace HRHarmonySystem
                             Dashboard_IE.Text = count.ToString();
 
                         }
+                        reader.Close();
                     }
 
                 }
@@ -133,6 +143,93 @@ namespace HRHarmonySystem
                     connect.Close();
                 }
             }
+        }
+
+
+        //Insured Employees
+        public void DashboardDisplayINE()
+        {
+            if (connect.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connect.Open();
+
+                    string selectData = "SELECT COUNT(id) FROM employee WHERE insurance_cover = @insurance_cover AND delete_date IS NULL";
+
+                    //used to count amount users
+                    using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@insurance_cover", "Yes");
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            int count = Convert.ToInt32(reader[0]);
+                            Insured_Employeetxt.Text = count.ToString();
+
+                        }
+                        reader.Close();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Message" + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connect.Close();
+                }
+            }
+        }
+
+        //Not Insured Employees
+        public void DashboardDisplayNIE()
+        {
+            if (connect.State == ConnectionState.Closed)
+            {
+                try
+                {
+                    connect.Open();
+
+                    string selectData = "SELECT COUNT(id) FROM employee WHERE insurance_cover = @insurance_cover AND delete_date IS NULL";
+
+                    //used to count amount users
+                    using (SqlCommand cmd = new SqlCommand(selectData, connect))
+                    {
+                        cmd.Parameters.AddWithValue("@insurance_cover", "No");
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        if (reader.Read())
+                        {
+                            int count = Convert.ToInt32(reader[0]);
+                            NotInsured_Employeetxt.Text = count.ToString();
+
+                        }
+                        reader.Close();
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Message" + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    connect.Close();
+                }
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NotInsured_Employeetxt_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -23,6 +23,8 @@ namespace HRHarmonySystem
         {
             InitializeComponent();
 
+            //GridView
+            displayEmployeeData();
             DisplayInsuranceData();
 
             disableFields();
@@ -35,6 +37,14 @@ namespace HRHarmonySystem
             InsuranceData insurance_data = new InsuranceData();
             List<InsuranceData> employeeData = insurance_data.insurnaceData();
             dataGridView1.DataSource = employeeData;
+        }
+
+        //Employee Data
+        public void displayEmployeeData()
+        {
+            EmployeeData employeeData1 = new EmployeeData();
+            List<EmployeeData> listData = employeeData1.employeeListData();
+            dataGridView1.DataSource = listData;
         }
 
 
@@ -99,7 +109,7 @@ namespace HRHarmonySystem
                         {
                             connect.Open();
 
-                            string updateData = "UPDATE employee SET  insurance_cover = @insurance_cover, insurance_package = @insurance_cover, update_date = @update_date WHERE employee_id = @employeeID";
+                            string updateData = "UPDATE employee SET  insurance_cover = @insurance_cover, insurance_package = @insurance_package, update_date = @update_date WHERE employee_id = @employeeID";
 
                             using (SqlCommand cmd = new SqlCommand(updateData, connect))
                             {

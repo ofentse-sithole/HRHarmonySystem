@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Insurnace = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            this.btn_Insurnace = new System.Windows.Forms.Button();
             this.btn_signout = new System.Windows.Forms.Button();
             this.btn_salary = new System.Windows.Forms.Button();
             this.btn_employee = new System.Windows.Forms.Button();
             this.btn_dashboard = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             this.insurance1 = new HRHarmonySystem.Insurance();
             this.salary1 = new HRHarmonySystem.Salary();
             this.add_Employee1 = new HRHarmonySystem.Add_Employee();
@@ -97,6 +98,31 @@
             this.panel2.Size = new System.Drawing.Size(225, 564);
             this.panel2.TabIndex = 1;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(65, 536);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 15);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "SIGN OUT";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(39, 172);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(133, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Welcome, User";
+            // 
+            // sqlCommand1
+            // 
+            this.sqlCommand1.CommandTimeout = 30;
+            this.sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
             // btn_Insurnace
             // 
             this.btn_Insurnace.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -111,16 +137,6 @@
             this.btn_Insurnace.Text = "INSURANCE";
             this.btn_Insurnace.UseVisualStyleBackColor = false;
             this.btn_Insurnace.Click += new System.EventHandler(this.btnInsurance_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(65, 536);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 15);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "SIGN OUT";
             // 
             // btn_signout
             // 
@@ -178,16 +194,6 @@
             this.btn_dashboard.UseVisualStyleBackColor = false;
             this.btn_dashboard.Click += new System.EventHandler(this.btn_dashboard_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 172);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Welcome, User";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HRHarmonySystem.Properties.Resources.download_icon_user_icon_1320191245971961880_128;
@@ -197,23 +203,18 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // sqlCommand1
-            // 
-            this.sqlCommand1.CommandTimeout = 30;
-            this.sqlCommand1.EnableOptimizedParameterBinding = false;
-            // 
             // insurance1
             // 
             this.insurance1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.insurance1.Location = new System.Drawing.Point(225, 36);
             this.insurance1.Name = "insurance1";
-            this.insurance1.Size = new System.Drawing.Size(875, 565);
+            this.insurance1.Size = new System.Drawing.Size(875, 564);
             this.insurance1.TabIndex = 2;
             // 
             // salary1
             // 
             this.salary1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.salary1.Location = new System.Drawing.Point(225, 36);
+            this.salary1.Location = new System.Drawing.Point(225, 35);
             this.salary1.Name = "salary1";
             this.salary1.Size = new System.Drawing.Size(875, 565);
             this.salary1.TabIndex = 3;
@@ -221,7 +222,7 @@
             // add_Employee1
             // 
             this.add_Employee1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.add_Employee1.Location = new System.Drawing.Point(225, 36);
+            this.add_Employee1.Location = new System.Drawing.Point(225, 35);
             this.add_Employee1.Name = "add_Employee1";
             this.add_Employee1.Size = new System.Drawing.Size(875, 565);
             this.add_Employee1.TabIndex = 4;
@@ -247,6 +248,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";

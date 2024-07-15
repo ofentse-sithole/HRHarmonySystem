@@ -63,9 +63,79 @@ namespace HRHarmonySystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Basic_Plan__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Basic Plan (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Basic_Plan__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Basic Plan (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap download_icon_add_avatar_human_man_profile_icon_1320085876593184757_32 {
             get {
                 object obj = ResourceManager.GetObject("download-icon-add+avatar+human+man+profile+icon-1320085876593184757_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_icon_basic_black_launch_131994931050360851_32 {
+            get {
+                object obj = ResourceManager.GetObject("download-icon-basic+black-launch-131994931050360851_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_icon_basic_black_launch_131994931050360851_48 {
+            get {
+                object obj = ResourceManager.GetObject("download-icon-basic+black-launch-131994931050360851_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_icon_basic_black_rocket_131994931056758320_24 {
+            get {
+                object obj = ResourceManager.GetObject("download-icon-basic+black-rocket-131994931056758320_24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_icon_basic_black_rocket_131994931056758320_48 {
+            get {
+                object obj = ResourceManager.GetObject("download-icon-basic+black-rocket-131994931056758320_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap download_icon_basic_black_rocket_131994931105240128_48 {
+            get {
+                object obj = ResourceManager.GetObject("download-icon-basic+black-rocket-131994931105240128_48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -257,6 +327,76 @@ namespace HRHarmonySystem.Properties {
         internal static System.Drawing.Bitmap employeecard {
             get {
                 object obj = ResourceManager.GetObject("employeecard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premiumPlan {
+            get {
+                object obj = ResourceManager.GetObject("premiumPlan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premiumPlan__1_ {
+            get {
+                object obj = ResourceManager.GetObject("premiumPlan (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premiumPlan__2_ {
+            get {
+                object obj = ResourceManager.GetObject("premiumPlan (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premiumPlan__3_ {
+            get {
+                object obj = ResourceManager.GetObject("premiumPlan (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap premiumPlan__4_ {
+            get {
+                object obj = ResourceManager.GetObject("premiumPlan (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StandardPlan__1_ {
+            get {
+                object obj = ResourceManager.GetObject("StandardPlan (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StandardPlan__2_ {
+            get {
+                object obj = ResourceManager.GetObject("StandardPlan (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
