@@ -1,5 +1,3 @@
-﻿ALTER TABLE employee ADD insurance_cover VARCHAR(MAX) NULL;
-
-ALTER TABLE employee ADD insurance_package VARCHAR(MAX) NULL;
+﻿SELECT COUNT(id) FROM employee WHERE status = 'Active' AND delete_date IS NULL
 
 SELECT * FROM employee
