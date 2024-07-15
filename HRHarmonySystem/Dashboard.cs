@@ -29,6 +29,21 @@ namespace HRHarmonySystem
 
         }
 
+        //Refresh Data
+        public void RefreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)RefreshData);
+                return;
+            }
+            DashboardDisplayTE();
+            DashboardDisplayAE();
+            DashboardDisplayIE();
+            DashboardDisplayINE();
+            DashboardDisplayNIE();
+        }
+
         //TOTAL EMPLOYEES
         public void DashboardDisplayTE()
         {

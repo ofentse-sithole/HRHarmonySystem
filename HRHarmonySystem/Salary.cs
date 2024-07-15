@@ -23,7 +23,6 @@ namespace HRHarmonySystem
             InitializeComponent();
 
             //GridView
-            displayEmployeeData();
             displayEmployeeSalary();
 
             disableFields();
@@ -40,13 +39,19 @@ namespace HRHarmonySystem
             
         }
 
-        //Employee Data
-        public void displayEmployeeData()
+        //Refresh Data
+        public void RefreshData()
         {
-            EmployeeData employeeData1 = new EmployeeData();
-            List<EmployeeData> listData = employeeData1.employeeListData();
-            dataGridView1.DataSource = listData;
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)RefreshData);
+                return;
+            }
+            displayEmployeeSalary();
+
+            disableFields();
         }
+
 
         //updating the salary of the employee
         private void Salarybtn_Update_Click(object sender, EventArgs e)

@@ -24,11 +24,24 @@ namespace HRHarmonySystem
             InitializeComponent();
 
             //GridView
-            displayEmployeeData();
             DisplayInsuranceData();
 
             disableFields();
         }
+
+        //Refresh Data
+        public void RefreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)RefreshData);
+                return;
+            }
+            DisplayInsuranceData();
+
+            disableFields();
+        }
+
 
         public void DisplayInsuranceData()
         {
@@ -39,13 +52,6 @@ namespace HRHarmonySystem
             dataGridView1.DataSource = employeeData;
         }
 
-        //Employee Data
-        public void displayEmployeeData()
-        {
-            EmployeeData employeeData1 = new EmployeeData();
-            List<EmployeeData> listData = employeeData1.employeeListData();
-            dataGridView1.DataSource = listData;
-        }
 
 
         private void disableFields()

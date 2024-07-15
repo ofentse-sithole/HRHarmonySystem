@@ -30,6 +30,18 @@ namespace HRHarmonySystem
             displayData();
         }
 
+        //Refresh Data
+        public void RefreshData()
+        {
+            if (InvokeRequired)
+            {
+                Invoke((MethodInvoker)RefreshData);
+                return;
+            }
+            displayData();
+
+        }
+
         public void displayData() 
         {
             EmployeeData employeeData = new EmployeeData();

@@ -44,6 +44,12 @@ namespace HRHarmonySystem
             add_Employee1.Visible = false;
             salary1.Visible = false;
             insurance1.Visible = false;
+
+            Dashboard dashboard = dashboard1 as Dashboard;
+            if(dashboard != null)
+            {
+                dashboard.RefreshData();
+            }
         }
 
         private void btn_employee_Click(object sender, EventArgs e)
@@ -52,6 +58,12 @@ namespace HRHarmonySystem
             add_Employee1.Visible = true;
             salary1.Visible = false;
             insurance1.Visible = false;
+
+            Add_Employee employee = add_Employee1 as Add_Employee;
+            if(employee != null)
+            {
+                employee.RefreshData();
+            }
         }
 
         private void btn_salary_Click(object sender, EventArgs e)
@@ -60,6 +72,12 @@ namespace HRHarmonySystem
             add_Employee1.Visible = false;
             salary1.Visible = true;
             insurance1.Visible = false;
+
+            Salary salary = salary1 as Salary;
+            if(salary != null)
+            {
+                salary.RefreshData();
+            }
         }
 
         private void btnInsurance_Click(object sender, EventArgs e)
@@ -68,6 +86,12 @@ namespace HRHarmonySystem
             dashboard1.Visible = false;
             add_Employee1.Visible = false;
             salary1.Visible = false;
+
+            Insurance insurance = insurance1 as Insurance;
+            if(insurance != null)
+            {
+                insurance.RefreshData();
+            }
         }
 
         private void salary1_Load(object sender, EventArgs e)
